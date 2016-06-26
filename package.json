@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/thiagolimaa/WebPack-Background#readme",
   "dependencies": {
+    "jquery": "^3.0.0",
     "webpack": "^1.13.1"
   }
 }
