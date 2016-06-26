@@ -5,3 +5,5 @@
  *scripts.js (module name goes here)
  *
  */
+
+console.log("Loaded module 2");
