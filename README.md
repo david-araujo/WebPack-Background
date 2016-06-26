@@ -4,7 +4,7 @@
 
 Experimental environment testing with **web pack**.
 
-### This is going to be divided into two test firstly which are:
+### This is going to be divided into two tests, which are:
 
 1. Dev Environment
 
@@ -19,3 +19,5 @@ Experimental environment testing with **web pack**.
    * Uglify
    * Tasks
    * Running the server
+
+*Installing and further options are going to be released soon.*
