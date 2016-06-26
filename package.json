@@ -1,0 +1,29 @@
+{
+  "name": "webpack-background",
+  "version": "1.0.0",
+  "description": "WebPack Background setting environments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagolimaa/WebPack-Background.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "WebPack",
+    "JavaScript",
+    "WebApp",
+    "App"
+  ],
+  "author": "Thiago Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagolimaa/WebPack-Background/issues"
+  },
+  "homepage": "https://github.com/thiagolimaa/WebPack-Background#readme",
+  "dependencies": {
+    "webpack": "^1.13.1"
+  }
+}
