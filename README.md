@@ -1,2 +1,5 @@
 # WebPack-Background
-WebPack Settings and Configs For Production and Dev Environments
+
+*WebPack Settings and Configs For Production and Dev Environments*
+
+Experimental environment testing with **web pack**.
