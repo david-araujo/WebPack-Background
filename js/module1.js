@@ -56,11 +56,18 @@ const CARS = {
         );
      });
    },
+   carsObject: (object) => {
+     for (const i in CARS) {
+      object = console.log(CARS[i]);
+     }
+     return object;
+   },
    init: (start) => {
      start = [
        CARS.printAudi(),
        CARS.printFerrari(),
-       CARS.printMercedes()
+       CARS.printMercedes(),
+       CARS.carsObject()
      ];
      return start;
    }
