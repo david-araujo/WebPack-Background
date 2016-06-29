@@ -68,6 +68,7 @@ const CARS = {
     });
   },
   carsObject: (object) => {
+    console.log('Car\'s Collection:');
     for (const i in CARS) {
       object = console.log(CARS[i]);
     }
@@ -78,8 +79,8 @@ const CARS = {
       CARS.printAudi(),
       CARS.printFerrari(),
       CARS.printMercedes(),
-      CARS.printFilterAudi(),
-      CARS.carsObject()
+      CARS.carsObject(),
+      CARS.printFilterAudi()
     ];
     return start;
   }
