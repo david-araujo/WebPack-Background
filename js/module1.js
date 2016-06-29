@@ -56,6 +56,17 @@ const CARS = {
       );
     });
   },
+  printFilterAudi: (element) => {
+    console.log("Audi cars newer than 2009");
+
+     element = CARS.audi.filter(car => car.year > "2009").forEach((element, index) => {
+          console.log(index + " - " +
+        " Model: " + element.model + " - " +
+        " Year: " + element.year + " - " +
+        " Colors Available: " + " [ " + element.color + " ] "
+       );
+    });
+  },
   carsObject: (object) => {
     for (const i in CARS) {
       object = console.log(CARS[i]);
@@ -67,6 +78,7 @@ const CARS = {
       CARS.printAudi(),
       CARS.printFerrari(),
       CARS.printMercedes(),
+      CARS.printFilterAudi(),
       CARS.carsObject()
     ];
     return start;
