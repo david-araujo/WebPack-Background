@@ -75,26 +75,25 @@ const CARS = {
     console.log(object);
 
   },
-  printFilterFerrari: (object) => {
-  console.log("Ferrari cars matching Spider:");
+  printFilterFerrari: () => {
+    console.log("Ferrari cars matching Spider:");
 
-  object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
-    .forEach((element, index) => {
-      console.log(index + " - " +
-        " Model: " + element.model + " - " +
-        " Year: " + element.year + " - " +
-        " Colors Available: " + " [ " + element.color + " ] "
-      );
-    });
-
-},
-carsObject: (object) => {
-  console.log("Car\'s Collection:");
-  for (const i in CARS) {
-    object = console.log(CARS[i]);
-  }
-  return object;
-},
+    object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
+      .forEach((element, index) => {
+        console.log(index + " - " +
+          " Model: " + element.model + " - " +
+          " Year: " + element.year + " - " +
+          " Colors Available: " + " [ " + element.color + " ] "
+        );
+      });
+  },
+  carsObject: (object) => {
+    console.log("Car\'s Collection:");
+    for (const i in CARS) {
+      object = console.log(CARS[i]);
+    }
+    return object;
+  },
   init: (start) => {
     start = [
       CARS.printAudi(),
