@@ -73,6 +73,17 @@ const CARS = {
     
     console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
     console.log(object);  
+  
+  },
+  printFilterFerrari(object){
+    console.log("Ferrari cars matching Spider:");
+    
+    object = CARS.ferrari.filter(car => car.model === "Spider");
+    
+    console.log("Audi\'s Cars " + " (" + "Ferrari cars matching Spider:" + ") " + " Objects:");
+    console.log(object);
+
+
   },
   carsObject: (object) => {
     console.log("Car\'s Collection:");
@@ -88,7 +99,8 @@ const CARS = {
       CARS.printMercedes(),
       CARS.carsObject(),
       CARS.printFilterAudi(),
-      CARS.audiFilterObject()
+      CARS.audiFilterObject(),
+      CARS.printFilterFerrari()
     ];
     return start;
   }
