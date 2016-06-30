@@ -59,39 +59,42 @@ const CARS = {
   printFilterAudi: () => {
     console.log("Audi cars newer than 2009:");
 
-     CARS.audi.filter(car => car.year > "2009").forEach((element, index) => {
-          console.log(index + " - " +
+    CARS.audi.filter(car => car.year > "2009").forEach((element, index) => {
+      console.log(index + " - " +
         " Model: " + element.model + " - " +
         " Year: " + element.year + " - " +
         " Colors Available: " + " [ " + element.color + " ] "
-       );
+      );
     });
   },
   audiFilterObject: (object) => {
 
     object = CARS.audi.filter(car => car.year > "2009");
-    
+
     console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
-    console.log(object);  
-  
-  },
-  printFilterFerrari(object){
-    console.log("Ferrari cars matching Spider:");
-    
-    object = CARS.ferrari.filter(car => car.model === "Spider");
-    
-    console.log("Audi\'s Cars " + " (" + "Ferrari cars matching Spider:" + ") " + " Objects:");
     console.log(object);
 
+  },
+  printFilterFerrari: (object) => {
+  console.log("Ferrari cars matching Spider:");
 
-  },
-  carsObject: (object) => {
-    console.log("Car\'s Collection:");
-    for (const i in CARS) {
-      object = console.log(CARS[i]);
-    }
-    return object;
-  },
+  object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
+    .forEach((element, index) => {
+      console.log(index + " - " +
+        " Model: " + element.model + " - " +
+        " Year: " + element.year + " - " +
+        " Colors Available: " + " [ " + element.color + " ] "
+      );
+    });
+
+},
+carsObject: (object) => {
+  console.log("Car\'s Collection:");
+  for (const i in CARS) {
+    object = console.log(CARS[i]);
+  }
+  return object;
+},
   init: (start) => {
     start = [
       CARS.printAudi(),
