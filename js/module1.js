@@ -67,19 +67,19 @@ const CARS = {
        );
     });
   },
-  carsObject: (object) => {
-    console.log("Car\'s Collection:");
-    for (const i in CARS) {
-      object = console.log(CARS[i]);
-    }
-    return object;
-  },
   audiFilterObject: (object) => {
 
     object = CARS.audi.filter(car => car.year > "2009");
     
     console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
     console.log(object);  
+  },
+  carsObject: (object) => {
+    console.log("Car\'s Collection:");
+    for (const i in CARS) {
+      object = console.log(CARS[i]);
+    }
+    return object;
   },
   init: (start) => {
     start = [
