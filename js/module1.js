@@ -167,4 +167,8 @@ const CARS = {
   }
 };
 
-CARS.init(this.start);
+ /**
+   * @description: Getting init Array started
+   */
+
+  CARS.init(this.start);
