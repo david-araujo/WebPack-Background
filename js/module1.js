@@ -20,7 +20,7 @@ const CARS = {
   ],
   mercedes: [
     { model: 'Kompressor', year: '2004', color: ['black', 'white', 'red', 'blue'] },
-    { model: 'AMD', year: '2006', color: ['black', 'white', 'red', 'blue'] },
+    { model: 'AMD', year: '2006', color: ['purple', 'white', 'red', 'blue'] },
     { model: 'F1', year: '2016', color: ['black', 'white', 'red', 'blue'] }
   ],
   printAudi: () => {
@@ -88,12 +88,24 @@ const CARS = {
       });
   },
   ferrariFilterObject: (object) => {
-    
+
     object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
 
     console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
     console.log(object);
 
+  },
+  printFilterMercedes: () => {
+    console.log("Mercedes cars newer or equal 2004 and color black:");
+
+    CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple")
+      .forEach((element, index) => {
+        console.log(index + " - " +
+          " Model: " + element.model + " - " +
+          " Year: " + element.year + " - " +
+          " Colors Available: " + " [ " + element.color + " ] "
+        );
+      });
   },
   carsObject: (object) => {
     console.log("Car\'s Collection:");
@@ -111,7 +123,8 @@ const CARS = {
       CARS.printFilterAudi(),
       CARS.audiFilterObject(),
       CARS.printFilterFerrari(),
-      CARS.ferrariFilterObject()
+      CARS.ferrariFilterObject(),
+      CARS.printFilterMercedes()
     ];
     return start;
   }
