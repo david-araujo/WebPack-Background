@@ -144,6 +144,12 @@ const CARS = {
     }
     return object;
   },
+
+  /**
+   * @description: Initializing the functions
+   * they're called into an array collection.
+   */
+
   init: (start) => {
     start = [
       CARS.printAudi(),
