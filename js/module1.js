@@ -78,7 +78,7 @@ const CARS = {
   printFilterFerrari: () => {
     console.log("Ferrari cars matching Spider:");
 
-    object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
+    CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
       .forEach((element, index) => {
         console.log(index + " - " +
           " Model: " + element.model + " - " +
@@ -86,6 +86,14 @@ const CARS = {
           " Colors Available: " + " [ " + element.color + " ] "
         );
       });
+  },
+  ferrariFilterObject: (object) => {
+    
+    object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
+
+    console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
+    console.log(object);
+
   },
   carsObject: (object) => {
     console.log("Car\'s Collection:");
@@ -102,7 +110,8 @@ const CARS = {
       CARS.carsObject(),
       CARS.printFilterAudi(),
       CARS.audiFilterObject(),
-      CARS.printFilterFerrari()
+      CARS.printFilterFerrari(),
+      CARS.ferrariFilterObject()
     ];
     return start;
   }
