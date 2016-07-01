@@ -36,7 +36,7 @@ const CARS = {
    */
 
   printAudi: () => {
-    
+
     console.log("Audi Cars Models:");
 
     try {
@@ -57,7 +57,7 @@ const CARS = {
     }
   },
   printFerrari: () => {
-    
+
     console.log("Ferrari Cars Models:");
 
     try {
@@ -71,22 +71,32 @@ const CARS = {
       });
 
     } catch (err) {
-       
+
       document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
 
     }
   },
   printMercedes: () => {
+
     console.log("Mercedes Cars Models:");
 
-    CARS.mercedes.forEach((element, index) => {
-      console.log(index + " - " +
-        " Model: " + element.model + " - " +
-        " Year: " + element.year + " - " +
-        " Colors Available: " + " [ " + element.color + " ] "
-      );
-    });
+    try {
+
+      CARS.mercedes.forEach((element, index) => {
+        console.log(index + " - " +
+          " Model: " + element.model + " - " +
+          " Year: " + element.year + " - " +
+          " Colors Available: " + " [ " + element.color + " ] "
+        );
+      });
+
+    } catch (err) {
+
+      document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
+      console.log("An error accured on loop Audi Array: ", err);
+
+    }
   },
 
   /**
