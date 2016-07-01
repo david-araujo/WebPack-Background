@@ -30,6 +30,11 @@ const CARS = {
     { model: 'AMD', year: '2006', color: ['purple', 'white', 'red', 'blue'] },
     { model: 'F1', year: '2016', color: ['black', 'white', 'red', 'blue'] }
   ],
+
+  /**
+   * @description: Objects being looped in scope
+   */
+  
   printAudi: () => {
     console.log("Audi Cars Models:");
 
