@@ -50,7 +50,7 @@ const CARS = {
 
     } catch (err) {
 
-      document.querySelector('.err').innerHTML = err;
+      document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
       
     }
