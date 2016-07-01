@@ -125,16 +125,26 @@ const CARS = {
     }
   },
   printFilterFerrari: () => {
+
     console.log("Ferrari cars matching Spider:");
 
-    CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
-      .forEach((element, index) => {
-        console.log(index + " - " +
-          " Model: " + element.model + " - " +
-          " Year: " + element.year + " - " +
-          " Colors Available: " + " [ " + element.color + " ] "
-        );
-      });
+    try {
+
+      CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
+        .forEach((element, index) => {
+          console.log(index + " - " +
+            " Model: " + element.model + " - " +
+            " Year: " + element.year + " - " +
+            " Colors Available: " + " [ " + element.color + " ] "
+          );
+        });
+
+    } catch (err) {
+
+      document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
+      console.log("An error accured on loop Audi Array: ", err);
+
+    }
   },
   printFilterMercedes: () => {
     console.log("Mercedes cars newer or equal 2004 and color black:");
