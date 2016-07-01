@@ -36,6 +36,7 @@ const CARS = {
    */
 
   printAudi: () => {
+    
     console.log("Audi Cars Models:");
 
     try {
@@ -52,19 +53,29 @@ const CARS = {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
-      
+
     }
   },
   printFerrari: () => {
+    
     console.log("Ferrari Cars Models:");
 
-    CARS.ferrari.forEach((element, index) => {
-      console.log(index + " - " +
-        " Model: " + element.model + " - " +
-        " Year: " + element.year + " - " +
-        " Colors Available: " + " [ " + element.color + " ] "
-      );
-    });
+    try {
+
+      CARS.ferrari.forEach((element, index) => {
+        console.log(index + " - " +
+          " Model: " + element.model + " - " +
+          " Year: " + element.year + " - " +
+          " Colors Available: " + " [ " + element.color + " ] "
+        );
+      });
+
+    } catch (err) {
+       
+      document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
+      console.log("An error accured on loop Audi Array: ", err);
+
+    }
   },
   printMercedes: () => {
     console.log("Mercedes Cars Models:");
@@ -151,7 +162,7 @@ const CARS = {
    * @description: Car's object is built here
    * It loops the array of objects without filter
    */
-  
+
   carsObject: (object) => {
     console.log("Car\'s Collection:");
     for (const i in CARS) {
@@ -182,8 +193,8 @@ const CARS = {
   }
 };
 
- /**
-   * @description: Getting init Array started
-   */
+/**
+  * @description: Getting init Array started
+  */
 
-  CARS.init(this.start);
+CARS.init(this.start);
