@@ -8,6 +8,13 @@
 
 
 const CARS = {
+
+  /**
+   *@description: Array of Objects Collections
+   *dummy data is created just to make sure we 
+   *can loop through and print results. 
+   */
+
   audi: [
     { model: 'A3', year: '2015', color: ['black', 'white', 'red'] },
     { model: 'Q5', year: '2014', color: ['black', 'white', 'red'] },
