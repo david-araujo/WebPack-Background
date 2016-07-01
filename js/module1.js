@@ -146,6 +146,12 @@ const CARS = {
     console.log(object);
 
   },
+
+  /**
+   * @description: Car's object is built here
+   * It loops the array of objects without filter
+   */
+  
   carsObject: (object) => {
     console.log("Car\'s Collection:");
     for (const i in CARS) {
@@ -176,4 +182,8 @@ const CARS = {
   }
 };
 
-CARS.init(this.start);
+ /**
+   * @description: Getting init Array started
+   */
+
+  CARS.init(this.start);
