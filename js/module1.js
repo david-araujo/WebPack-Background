@@ -107,6 +107,14 @@ const CARS = {
         );
       });
   },
+  mercedesFilterObject: (object) => {
+    
+    object = CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple");
+
+    console.log("Mercedes\'s Cars " + " (" + "Matching newer or equal 2004 and color black:" + ") " + " Objects:");
+    console.log(object);
+
+  },
   carsObject: (object) => {
     console.log("Car\'s Collection:");
     for (const i in CARS) {
@@ -124,7 +132,8 @@ const CARS = {
       CARS.audiFilterObject(),
       CARS.printFilterFerrari(),
       CARS.ferrariFilterObject(),
-      CARS.printFilterMercedes()
+      CARS.printFilterMercedes(),
+      CARS.mercedesFilterObject()
     ];
     return start;
   }
