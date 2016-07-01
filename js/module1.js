@@ -68,6 +68,11 @@ const CARS = {
       );
     });
   },
+
+  /**
+   * @description: Printing filtered objects
+   */
+
   printFilterAudi: () => {
     console.log("Audi cars newer than 2009:");
 
