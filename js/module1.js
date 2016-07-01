@@ -79,14 +79,6 @@ const CARS = {
       );
     });
   },
-  audiFilterObject: (object) => {
-
-    object = CARS.audi.filter(car => car.year > "2009");
-
-    console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
-    console.log(object);
-
-  },
   printFilterFerrari: () => {
     console.log("Ferrari cars matching Spider:");
 
@@ -99,14 +91,6 @@ const CARS = {
         );
       });
   },
-  ferrariFilterObject: (object) => {
-
-    object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
-
-    console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
-    console.log(object);
-
-  },
   printFilterMercedes: () => {
     console.log("Mercedes cars newer or equal 2004 and color black:");
 
@@ -118,6 +102,22 @@ const CARS = {
           " Colors Available: " + " [ " + element.color + " ] "
         );
       });
+  },
+  audiFilterObject: (object) => {
+
+    object = CARS.audi.filter(car => car.year > "2009");
+
+    console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
+    console.log(object);
+
+  },
+  ferrariFilterObject: (object) => {
+
+    object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
+
+    console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
+    console.log(object);
+
   },
   mercedesFilterObject: (object) => {
     
