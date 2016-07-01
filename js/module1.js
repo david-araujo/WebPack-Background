@@ -108,6 +108,11 @@ const CARS = {
         );
       });
   },
+
+  /**
+   * @description: Creating filtered objects
+   */
+
   audiFilterObject: (object) => {
 
     object = CARS.audi.filter(car => car.year > "2009");
