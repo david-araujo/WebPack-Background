@@ -229,10 +229,20 @@ const CARS = {
 
   carsObject: (object) => {
     console.log("Car\'s Collection:");
-    for (const i in CARS) {
-      object = console.log(CARS[i]);
+
+    try {
+
+      for (const i in CARS) {
+        object = console.log(CARS[i]);
+      }
+      return object;
+    } catch (err){
+
+      document.querySelector('.err').innerHTML = "Could not create the array of objects : " + err;
+      console.log("Could not create the array of objects: ", err);
+      return;
+
     }
-    return object;
   },
 
   /**
