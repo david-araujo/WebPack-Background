@@ -197,7 +197,7 @@ const CARS = {
 
       console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
       console.log(object);
-      
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Ferrari Array: " + err;
@@ -207,11 +207,19 @@ const CARS = {
   },
   mercedesFilterObject: (object) => {
 
-    object = CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple");
+    try {
 
-    console.log("Mercedes\'s Cars " + " (" + "Matching newer or equal 2004 and color black:" + ") " + " Objects:");
-    console.log(object);
+      object = CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple");
 
+      console.log("Mercedes\'s Cars " + " (" + "Matching newer or equal 2004 and color black:" + ") " + " Objects:");
+      console.log(object);
+
+    } catch (err) {
+
+      document.querySelector('.err').innerHTML = "An error accured on loop Mercedes Array: " + err;
+      console.log("An error accured on loop Mercedes Array: ", err);
+
+    }
   },
 
   /**
