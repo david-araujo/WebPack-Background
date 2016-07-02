@@ -152,16 +152,16 @@ const CARS = {
 
     try {
 
-    CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple")
-      .forEach((element, index) => {
-        console.log(index + " - " +
-          " Model: " + element.model + " - " +
-          " Year: " + element.year + " - " +
-          " Colors Available: " + " [ " + element.color + " ] "
-        );
-      });
-    
-    } catch (err){
+      CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple")
+        .forEach((element, index) => {
+          console.log(index + " - " +
+            " Model: " + element.model + " - " +
+            " Year: " + element.year + " - " +
+            " Colors Available: " + " [ " + element.color + " ] "
+          );
+        });
+
+    } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Mercedes Array: " + err;
       console.log("An error accured on loop Mercedes Array: ", err);
@@ -175,11 +175,19 @@ const CARS = {
 
   audiFilterObject: (object) => {
 
-    object = CARS.audi.filter(car => car.year > "2009");
+    try {
 
-    console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
-    console.log(object);
+      object = CARS.audi.filter(car => car.year > "2009");
 
+      console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
+      console.log(object);
+
+    } catch (err) {
+
+      document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
+      console.log("An error accured on loop Audi Array: ", err);
+
+    }
   },
   ferrariFilterObject: (object) => {
 
