@@ -41,7 +41,7 @@ const CARS = {
 
     try {
 
-     let object = CARS.audi.forEach((element, index) => {
+      let object = CARS.audi.forEach((element, index) => {
         console.log(index + " - " +
           " Model: " + element.model + " - " +
           " Year: " + element.year + " - " +
@@ -58,21 +58,21 @@ const CARS = {
       return;
 
     } finally {
-      
+
       let loaded = document.createElement('span');
       let text = document.createTextNode('Audi is now loaded');
       loaded.appendChild(text);
-      document.querySelector('.loaded').innerHTML = loaded.textContent;
+      document.querySelector('.loadAudi').innerHTML = loaded.textContent;
 
     }
   },
-  printFerrari: () => {
+  printFerrari: (object) => {
 
     console.log("Ferrari Cars Models:");
 
     try {
 
-      CARS.ferrari.forEach((element, index) => {
+      let object = CARS.ferrari.forEach((element, index) => {
         console.log(index + " - " +
           " Model: " + element.model + " - " +
           " Year: " + element.year + " - " +
@@ -80,10 +80,19 @@ const CARS = {
         );
       });
 
+      return object;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Ferrari Array: " + err;
       console.log("An error accured on loop Ferrari Array: ", err);
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Ferrari is now loaded');
+      loaded.appendChild(text);
+      document.querySelector('.loadFerrari').innerHTML = loaded.textContent;
 
     }
   },
@@ -246,7 +255,7 @@ const CARS = {
         object = console.log(CARS[i]);
       }
       return object;
-    } catch (err){
+    } catch (err) {
 
       document.querySelector('.err').innerHTML = "Could not create the array of objects : " + err;
       console.log("Could not create the array of objects: ", err);
