@@ -191,11 +191,19 @@ const CARS = {
   },
   ferrariFilterObject: (object) => {
 
-    object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
+    try {
 
-    console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
-    console.log(object);
+      object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
 
+      console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
+      console.log(object);
+      
+    } catch (err) {
+
+      document.querySelector('.err').innerHTML = "An error accured on loop Ferrari Array: " + err;
+      console.log("An error accured on loop Ferrari Array: ", err);
+
+    }
   },
   mercedesFilterObject: (object) => {
 
