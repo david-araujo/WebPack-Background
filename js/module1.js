@@ -147,7 +147,10 @@ const CARS = {
     }
   },
   printFilterMercedes: () => {
+
     console.log("Mercedes cars newer or equal 2004 and color black:");
+
+    try {
 
     CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple")
       .forEach((element, index) => {
@@ -157,6 +160,13 @@ const CARS = {
           " Colors Available: " + " [ " + element.color + " ] "
         );
       });
+    
+    } catch (err){
+
+      document.querySelector('.err').innerHTML = "An error accured on loop Mercedes Array: " + err;
+      console.log("An error accured on loop Mercedes Array: ", err);
+
+    }
   },
 
   /**
