@@ -141,7 +141,7 @@ const CARS = {
 
     } catch (err) {
 
-      document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
+      document.querySelector('.err').innerHTML = "An error accured on loop Ferrari Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
 
     }
