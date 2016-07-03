@@ -62,7 +62,7 @@ const CARS = {
       let loaded = document.createElement('span');
       let text = document.createTextNode('Audi is now loaded');
       loaded.appendChild(text);
-      document.querySelector('.loadAudi').innerHTML = loaded.textContent;
+      document.getElementsByClassName('loadAudi')[0].appendChild(loaded);
 
     }
   },
@@ -92,17 +92,17 @@ const CARS = {
       let loaded = document.createElement('span');
       let text = document.createTextNode('Ferrari is now loaded');
       loaded.appendChild(text);
-      document.querySelector('.loadFerrari').innerHTML = loaded.textContent;
+      document.getElementsByClassName('loadFerrari')[0].appendChild(loaded);
 
     }
   },
-  printMercedes: () => {
+  printMercedes: (object) => {
 
     console.log("Mercedes Cars Models:");
 
     try {
 
-      CARS.mercedes.forEach((element, index) => {
+      let object = CARS.mercedes.forEach((element, index) => {
         console.log(index + " - " +
           " Model: " + element.model + " - " +
           " Year: " + element.year + " - " +
@@ -110,10 +110,20 @@ const CARS = {
         );
       });
 
+      return object;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Mercedes Array: " + err;
       console.log("An error accured on loop Mercedes Array: ", err);
+      return;
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Mercedes is now loaded');
+      loaded.appendChild(text);
+      document.getElementsByClassName('loadMercedes')[0].appendChild(loaded);
 
     }
   },
@@ -272,8 +282,8 @@ const CARS = {
   init: (start) => {
     start = [
       CARS.printAudi(this.object),
-      CARS.printFerrari(),
-      CARS.printMercedes(),
+      CARS.printFerrari(this.object),
+      CARS.printMercedes(this.object),
       CARS.carsObject(),
       CARS.printFilterAudi(),
       CARS.audiFilterObject(),
