@@ -163,13 +163,13 @@ const CARS = {
 
     }
   },
-  printFilterFerrari: () => {
+  printFilterFerrari: (query) => {
 
     console.log("Ferrari cars matching Spider:");
 
     try {
 
-      CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
+      let query = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50")
         .forEach((element, index) => {
           console.log(index + " - " +
             " Model: " + element.model + " - " +
@@ -178,10 +178,19 @@ const CARS = {
           );
         });
 
+      return query;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Ferrari Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Ferrari query');
+      loaded.appendChild(text);
+      document.getElementsByClassName('queryFerrari')[0].appendChild(loaded);
 
     }
   },
