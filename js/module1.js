@@ -236,7 +236,7 @@ const CARS = {
 
     try {
 
-      object = CARS.audi.filter(car => car.year > "2009");
+      let object = CARS.audi.filter(car => car.year > "2009");
 
       console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
       console.log(object);
@@ -262,7 +262,7 @@ const CARS = {
 
     try {
 
-      object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
+      let object = CARS.ferrari.filter(car => car.model === "Spider" || car.model === "F50");
 
       console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
       console.log(object);
@@ -288,15 +288,25 @@ const CARS = {
 
     try {
 
-      object = CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple");
+      let object = CARS.mercedes.filter(car => car.year >= "2004" && car.color[0] !== "purple");
 
       console.log("Mercedes\'s Cars " + " (" + "Matching newer or equal 2004 and color black:" + ") " + " Objects:");
       console.log(object);
+
+      return object;
 
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Mercedes Array: " + err;
       console.log("An error accured on loop Mercedes Array: ", err);
+      return;
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Mercedes Object');
+      loaded.appendChild(text);
+      document.getElementsByClassName('objectMercedes')[0].appendChild(loaded);
 
     }
   },
@@ -338,9 +348,9 @@ const CARS = {
       CARS.printFilterAudi(this.query),
       CARS.audiFilterObject(this.object),
       CARS.printFilterFerrari(this.query),
-      CARS.ferrariFilterObject(),
+      CARS.ferrariFilterObject(this.object),
       CARS.printFilterMercedes(this.query),
-      CARS.mercedesFilterObject()
+      CARS.mercedesFilterObject(this.query)
     ];
     return start;
   }
