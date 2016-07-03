@@ -317,19 +317,29 @@ const CARS = {
    */
 
   carsObject: (object) => {
+   
     console.log("Car\'s Collection:");
 
     try {
 
       for (const i in CARS) {
-        object = console.log(CARS[i]);
+       let object = console.log(CARS[i]);
       }
+
       return object;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "Could not create the array of objects : " + err;
       console.log("Could not create the array of objects: ", err);
       return;
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Cars Object');
+      loaded.appendChild(text);
+      document.getElementsByClassName('objectAll')[0].appendChild(loaded);
 
     }
   },
