@@ -210,7 +210,7 @@ const CARS = {
           );
         });
 
-        return query;
+      return query;
 
     } catch (err) {
 
@@ -241,10 +241,20 @@ const CARS = {
       console.log("Audi\'s Cars " + " (" + "After The Year Of 2009" + ") " + " Objects:");
       console.log(object);
 
+      return object;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
+      return;
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Audi Object');
+      loaded.appendChild(text);
+      document.getElementsByClassName('objectAudi')[0].appendChild(loaded);
 
     }
   },
@@ -316,7 +326,7 @@ const CARS = {
       CARS.printMercedes(this.object),
       CARS.carsObject(),
       CARS.printFilterAudi(this.query),
-      CARS.audiFilterObject(),
+      CARS.audiFilterObject(this.object),
       CARS.printFilterFerrari(this.query),
       CARS.ferrariFilterObject(),
       CARS.printFilterMercedes(this.query),
