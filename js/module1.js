@@ -350,7 +350,7 @@ const CARS = {
       CARS.printFilterFerrari(this.query),
       CARS.ferrariFilterObject(this.object),
       CARS.printFilterMercedes(this.query),
-      CARS.mercedesFilterObject()
+      CARS.mercedesFilterObject(this.query)
     ];
     return start;
   }
