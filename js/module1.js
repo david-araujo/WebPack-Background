@@ -132,13 +132,13 @@ const CARS = {
    * @description: Printing filtered objects
    */
 
-  printFilterAudi: () => {
+  printFilterAudi: (query) => {
 
     console.log("Audi cars newer than 2009:");
 
     try {
 
-      CARS.audi.filter(car => car.year > "2009").forEach((element, index) => {
+      let query = CARS.audi.filter(car => car.year > "2009").forEach((element, index) => {
         console.log(index + " - " +
           " Model: " + element.model + " - " +
           " Year: " + element.year + " - " +
@@ -146,10 +146,20 @@ const CARS = {
         );
       });
 
+      return query;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Audi Array: " + err;
       console.log("An error accured on loop Audi Array: ", err);
+      return;
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Audi query');
+      loaded.appendChild(text);
+      document.getElementsByClassName('queryAudi')[0].appendChild(loaded);
 
     }
   },
@@ -285,7 +295,7 @@ const CARS = {
       CARS.printFerrari(this.object),
       CARS.printMercedes(this.object),
       CARS.carsObject(),
-      CARS.printFilterAudi(),
+      CARS.printFilterAudi(this.query),
       CARS.audiFilterObject(),
       CARS.printFilterFerrari(),
       CARS.ferrariFilterObject(),
