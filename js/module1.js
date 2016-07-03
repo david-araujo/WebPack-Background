@@ -267,10 +267,20 @@ const CARS = {
       console.log("Ferrari\'s Cars " + " (" + "Matching Spider and F50 Models" + ") " + " Objects:");
       console.log(object);
 
+      return object;
+
     } catch (err) {
 
       document.querySelector('.err').innerHTML = "An error accured on loop Ferrari Array: " + err;
       console.log("An error accured on loop Ferrari Array: ", err);
+      return;
+
+    } finally {
+
+      let loaded = document.createElement('span');
+      let text = document.createTextNode('Ferrari Object');
+      loaded.appendChild(text);
+      document.getElementsByClassName('objectFerrari')[0].appendChild(loaded);
 
     }
   },
