@@ -14,20 +14,20 @@ const listWrap = $('<ul></ul>');
 
 const section = {
 
-    citiesWrapper:$('.carsList')  
- 
+    citiesWrapper: $('.carsList')
+
 };
 
 let builder = (listItem, options) => {
-    for( var i = 0; i < arr.length; i++ ){
+    for (var i = 0; i < arr.length; i++) {
 
-     let listItem = $('<li></li>'); 
-     listItem.text(arr[i]); 
-     listWrap.append(listItem);
+        let listItem = $('<li></li>');
+        listItem.text(arr[i]);
+        listWrap.append(listItem);
 
     }
 
-  section.citiesWrapper.append(listWrap);
+    section.citiesWrapper.append(listWrap);
 
 };
 
