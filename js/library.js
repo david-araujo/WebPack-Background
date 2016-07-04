@@ -16811,7 +16811,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    var _listItem = $('<li></li>');
 	
-	    _listItem.text(arr[i]);
+	    var textItem = $('<a></a>');
+	
+	    textItem.text(arr[i]);
+	    _listItem.append(textItem);
 	    listWrap.append(_listItem);
 	  }
 	
