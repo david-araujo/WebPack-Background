@@ -354,7 +354,7 @@ const CARS = {
       CARS.printAudi(this.object),
       CARS.printFerrari(this.object),
       CARS.printMercedes(this.object),
-      CARS.carsObject(),
+      CARS.carsObject(this.object),
       CARS.printFilterAudi(this.query),
       CARS.audiFilterObject(this.object),
       CARS.printFilterFerrari(this.query),
