@@ -1,33 +1,29 @@
-/**
- *@name: module3
- *
- *@description: First module to be imported into
- *scripts.js (JQuery List ECMAScript6)
- *
- */
-
+/** @name: module3 @description: First module to be imported into */
 
 const $ = require('JQuery');
 
 const arr = ['New York', 'Sao Paulo', 'Toquio'];
+
 const listWrap = $('<ul></ul>');
 
 const section = {
 
-    citiesWrapper: $('.carsList')
+  citiesWrapper: $('.carsList')
 
 };
 
-let builder = (listItem, options) => {
-    for (var i = 0; i < arr.length; i++) {
+let builder = (listItem) => {
 
-        let listItem = $('<li></li>');
-        listItem.text(arr[i]);
-        listWrap.append(listItem);
+  for (let i = 0; i < arr.length; i++) {
 
-    }
+    let listItem = $('<li></li>');
 
-    section.citiesWrapper.append(listWrap);
+    listItem.text(arr[i]);
+    listWrap.append(listItem);
+
+  }
+
+  section.citiesWrapper.append(listWrap);
 
 };
 
