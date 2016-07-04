@@ -18,7 +18,10 @@ let builder = (listItem) => {
 
     let listItem = $('<li></li>');
 
-    listItem.text(arr[i]);
+    let textItem = $('<a></a>');
+
+    textItem.text(arr[i]);
+    listItem.append(textItem);
     listWrap.append(listItem);
 
   }
