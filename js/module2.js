@@ -2,8 +2,8 @@
  *@name: module2
  *
  *@description: First module to be imported into
- *scripts.js (module name goes here)
+ *scripts.js (Loadash)
  *
  */
 
-console.log("Loaded module 2");
+console.log("Lodash testing dummy data");
