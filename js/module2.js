@@ -8,4 +8,4 @@
 
 const lodash = require('lodash');
 
-console.log("Lodash testing dummy data");
+console.log("Lodash testing dummy data", + lodash);
