@@ -2,7 +2,7 @@
   "name": "webpack-background",
   "version": "1.0.0",
   "description": "WebPack Background setting environments",
-  "main": "index.js",
+  "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
