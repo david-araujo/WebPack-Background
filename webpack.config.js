@@ -21,24 +21,24 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var path = require('path');
 var env = require('yargs').argv.mode;
 
-var libraryName = 'app';
+var appName = 'app';
 
 var plugins = [], outputFile;
 
 if (env === 'build') {
   plugins.push(new UglifyJsPlugin({ minimize: true }));
-  outputFile = libraryName + '.min.js';
+  outputFile = appName + '.min.js';
 } else {
-  outputFile = libraryName + '.js';
+  outputFile = appName + '.js';
 }
 
 var config = {
-  entry: './js/scripts.js',
+  entry: './src/js/scripts.js',
   devtool: 'source-map',
   output: {
-    path: __dirname + '/js',
+    path: __dirname + 'src/js',
     filename: outputFile,
-    library: libraryName,
+    library: appName,
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -57,7 +57,7 @@ var config = {
     ]
   },
   resolve: {
-    root: path.resolve('./src'),
+    root: path.resolve('./src/js'),
     extensions: ['', '.js']
   },
   plugins: plugins
