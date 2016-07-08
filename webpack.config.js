@@ -36,7 +36,7 @@ var config = {
   entry: './src/js/scripts.js',
   devtool: 'source-map',
   output: {
-    path: __dirname + 'src/js',
+    path: __dirname + '/src/js',
     filename: outputFile,
     library: appName,
     libraryTarget: 'umd',
