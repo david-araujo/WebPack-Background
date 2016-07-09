@@ -20,8 +20,26 @@ const PROGRAMMERS = {
     { user: 'AMD', age: '26', languages: [ 'php', 'nodejs', 'ruby on rails', 'asp' ] },
     { user: 'Kompressor', age: '24', languages: [ 'nodejs', 'asp', 'java' ] },
     { user: 'F1', age: '26', languages: [ 'java', 'python', 'nodejs', 'php' ] }
-  ]
+  ],
 
+  getData: (programmer) => {
+
+    let obj = PROGRAMMERS.frontend.forEach((programmer, index) => {
+
+      console.log(index + ' - ' +
+          ' Programmer: ' + programmer.user + ' - ' +
+          ' Age: ' + programmer.age + ' - ' +
+          ' Languages: ' + ' [ ' + programmer.languages + ' ] '
+        );
+    });
+
+    return {
+      obj
+    };
+
+  }
 };
+
+PROGRAMMERS.getData();
 
 console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + lodash);
