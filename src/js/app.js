@@ -354,7 +354,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	/* @Name: lodash class */
 	
-	var lodash = __webpack_require__(3);
+	var _ = __webpack_require__(3);
 	
 	var PROGRAMMERS = {
 	
@@ -377,9 +377,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	
+	console.log('Lodash result: ', _.filter(PROGRAMMERS.frontend));
 	PROGRAMMERS.getData();
 	
-	console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + lodash);
+	console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + _);
 
 /***/ },
 /* 3 */
