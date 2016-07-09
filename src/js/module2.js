@@ -1,6 +1,6 @@
 /* @Name: lodash class */
 
-const lodash = require('lodash');
+const _ = require('lodash');
 
 const PROGRAMMERS = {
 
@@ -40,6 +40,7 @@ const PROGRAMMERS = {
   }
 };
 
+console.log('Lodash result: ', _.filter(PROGRAMMERS.frontend));
 PROGRAMMERS.getData();
 
-console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + lodash);
+console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + _);
