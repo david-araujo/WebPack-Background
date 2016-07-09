@@ -361,8 +361,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /** @description: Array of Objects Collections */
 	
 	  frontend: [{ user: 'james', age: '25', languages: ['java script', 'php', 'python'] }, { user: 'robert', age: '24', languages: ['asp', 'css', 'html5'] }, { user: 'john', age: '29', languages: ['css', 'java script', 'sass'] }],
-	  backend: [{ user: 'Spider', age: '26', languages: ['php', 'nodejs', 'ruby on rails', 'asp'] }, { user: 'F50', age: '22', languages: ['nodejs', 'php', 'java'] }, { user: 'F40', age: '20', languages: ['ruby on rails', 'aspnet', 'php'] }],
-	  fullstack: [{ user: 'AMD', age: '26', languages: ['php', 'nodejs', 'ruby on rails', 'asp'] }, { user: 'Kompressor', age: '24', languages: ['nodejs', 'asp', 'java'] }, { user: 'F1', age: '26', languages: ['java', 'python', 'nodejs', 'php'] }],
+	  backend: [{ user: 'robert', age: '26', languages: ['php', 'nodejs', 'ruby on rails', 'asp'] }, { user: 'eric', age: '22', languages: ['nodejs', 'php', 'java'] }, { user: 'johnson', age: '20', languages: ['ruby on rails', 'aspnet', 'php'] }],
+	  fullstack: [{ user: 'jonathan', age: '26', languages: ['php', 'nodejs', 'ruby on rails', 'asp'] }, { user: 'kevin', age: '24', languages: ['nodejs', 'asp', 'java'] }, { user: 'louis', age: '26', languages: ['java', 'python', 'nodejs', 'php'] }],
 	
 	  getData: function getData(programmer) {
 	
@@ -372,12 +372,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	
 	    return {
-	      obj: obj
+	      _obj: obj
 	    };
 	  }
 	};
 	
-	console.log('Lodash result: ', _.filter(PROGRAMMERS.frontend));
+	console.log('Lodash result: ', _.filter(PROGRAMMERS.frontend, { user: 'james' }));
 	PROGRAMMERS.getData();
 	
 	console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + _);
