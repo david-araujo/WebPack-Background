@@ -366,19 +366,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  getData: function getData(programmer) {
 	
-	    var obj = PROGRAMMERS.frontend.forEach(function (programmer, index) {
+	    console.log('Programmer\'s Report: ');
+	
+	    PROGRAMMERS.frontend.forEach(function (programmer, index) {
 	
 	      console.log(index + ' - ' + ' Programmer: ' + programmer.user + ' - ' + ' Age: ' + programmer.age + ' - ' + ' Languages: ' + ' [ ' + programmer.languages + ' ] ');
 	    });
 	
 	    return {
-	      _obj: obj
+	      obj: _.filter(PROGRAMMERS, {})
 	    };
+	  },
+	
+	  getProgrammer: function getProgrammer(programmer) {
+	
+	    var obj = _.filter(PROGRAMMERS.frontend, { user: 'james' });
+	
+	    return { obj: obj };
 	  }
 	};
 	
-	console.log('Lodash result: ', _.filter(PROGRAMMERS.frontend, { user: 'james' }));
-	PROGRAMMERS.getData();
+	// PROGRAMMERS.getData();
+	console.log(PROGRAMMERS.getData());
+	console.log(PROGRAMMERS.getProgrammer());
 	
 	console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + _);
 
