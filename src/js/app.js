@@ -371,6 +371,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    PROGRAMMERS.frontend.forEach(function (programmer, index) {
 	
 	      console.log(index + ' - ' + ' Programmer: ' + programmer.user + ' - ' + ' Age: ' + programmer.age + ' - ' + ' Languages: ' + ' [ ' + programmer.languages + ' ] ');
+	
+	      var arr = [];
+	
+	      var data = arr.push({ programmer: programmer });
+	
+	      return data;
 	    });
 	
 	    return {
