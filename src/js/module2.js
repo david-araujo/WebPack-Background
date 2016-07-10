@@ -33,9 +33,16 @@ const PROGRAMMERS = {
           ' Age: ' + programmer.age + ' - ' +
           ' Languages: ' + ' [ ' + programmer.languages + ' ] '
         );
+
+      let arr = [];
+
+      let data = arr.push({programmer});
+
+      return data;
+
     });
 
-    return{
+    return {
       obj: _.filter(PROGRAMMERS, {})
     };
 
