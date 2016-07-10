@@ -386,7 +386,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return {
 	      obj: user,
 	      print: function print(user) {
-	        return console.log(obj.toString());
+	        return console.log(obj);
 	      }
 	    };
 	  },
@@ -400,13 +400,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    user = { result: result };
 	
 	    return { obj: user };
+	  },
+	
+	  init: function init(start) {
+	    start = [console.log(PROGRAMMERS.getData()), console.log(PROGRAMMERS.getProgrammer())];
 	  }
+	
 	};
 	
-	console.log(PROGRAMMERS.getData());
-	console.log(PROGRAMMERS.getProgrammer());
-	
-	console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + _);
+	PROGRAMMERS.init();
 
 /***/ },
 /* 3 */
