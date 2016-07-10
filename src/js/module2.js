@@ -31,28 +31,21 @@ const PROGRAMMERS = {
     frameworks: [ 'symphony', 'express', 'spring' ] }
   ],
 
-  getData: (programmer) => {
+  getData: (user) => {
 
     console.log('Programmer\'s Report: ');
 
-    PROGRAMMERS.frontend.forEach((programmer, index) => {
+    let obj = _.filter(PROGRAMMERS.frontend, {});
 
-      console.log(index + ' - ' +
-          ' Programmer: ' + programmer.user + ' - ' +
-          ' Age: ' + programmer.age + ' - ' +
-          ' Languages: ' + ' [ ' + programmer.languages + ' ] '
-        );
+    let result = obj;
 
-      let arr = [];
-
-      let data = arr.push({programmer});
-
-      return data;
-
-    });
+    user = {result};
 
     return {
-      obj: _.filter(PROGRAMMERS, {})
+      obj: user,
+      print: (user) => {
+        return console.log(obj);
+      }
     };
 
   },
