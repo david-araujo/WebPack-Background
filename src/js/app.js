@@ -368,7 +368,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    frameworks: ['zend', 'spring'] }, { user: 'eric', age: '22', languages: ['nodejs', 'php', 'java'],
 	    frameworks: ['express', 'symphony', 'spring'] }, { user: 'johnson', age: '20', languages: ['ruby on rails', 'aspnet', 'php'],
 	    frameworks: ['zend', 'framework'] }],
-	  fullstack: [{ user: 'jonathan', age: '26', languages: ['php', 'nodejs', 'ruby on rails', 'asp'] }, { user: 'kevin', age: '24', languages: ['nodejs', 'asp', 'java'] }, { user: 'louis', age: '26', languages: ['java', 'python', 'nodejs', 'php'] }],
+	  fullstack: [{ user: 'jonathan', age: '26', languages: ['php', 'nodejs', 'ruby on rails', 'asp'],
+	    frameworks: ['zend', 'angular', 'sass'] }, { user: 'kevin', age: '24', languages: ['nodejs', 'asp', 'java'],
+	    frameworks: ['zend', 'express', 'react'] }, { user: 'louis', age: '26', languages: ['java', 'python', 'nodejs', 'php'],
+	    frameworks: ['symphony', 'express', 'spring'] }],
 	
 	  getData: function getData(programmer) {
 	
@@ -390,11 +393,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	
-	  getProgrammer: function getProgrammer(programmer) {
+	  getProgrammer: function getProgrammer(user) {
 	
 	    var obj = _.filter(PROGRAMMERS.frontend, { user: 'james' });
 	
-	    return { obj: obj };
+	    var result = obj;
+	
+	    user = { result: result };
+	
+	    return { obj: user };
 	  }
 	};
 	
