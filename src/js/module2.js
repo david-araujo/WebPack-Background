@@ -23,9 +23,12 @@ const PROGRAMMERS = {
     frameworks: [ 'zend', 'framework' ] }
   ],
   fullstack: [
-    { user: 'jonathan', age: '26', languages: [ 'php', 'nodejs', 'ruby on rails', 'asp' ] },
-    { user: 'kevin', age: '24', languages: [ 'nodejs', 'asp', 'java' ] },
-    { user: 'louis', age: '26', languages: [ 'java', 'python', 'nodejs', 'php' ] }
+    { user: 'jonathan', age: '26', languages: [ 'php', 'nodejs', 'ruby on rails', 'asp' ],
+    frameworks: [ 'zend', 'angular', 'sass' ] },
+    { user: 'kevin', age: '24', languages: [ 'nodejs', 'asp', 'java' ],
+    frameworks: [ 'zend', 'express', 'react' ] },
+    { user: 'louis', age: '26', languages: [ 'java', 'python', 'nodejs', 'php' ],
+    frameworks: [ 'symphony', 'express', 'spring' ] }
   ],
 
   getData: (programmer) => {
@@ -54,11 +57,15 @@ const PROGRAMMERS = {
 
   },
 
-  getProgrammer: (programmer) => {
+  getProgrammer: (user) => {
 
     let obj = _.filter(PROGRAMMERS.frontend, {user: 'james'});
 
-    return { obj };
+    let result = obj;
+
+    user = {result};
+
+    return { obj: user };
 
   }
 };
