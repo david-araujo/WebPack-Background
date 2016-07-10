@@ -60,10 +60,15 @@ const PROGRAMMERS = {
 
     return { obj: user };
 
+  },
+
+  init: (start) => {
+    start = [
+      console.log(PROGRAMMERS.getData()),
+      console.log(PROGRAMMERS.getProgrammer())
+    ];
   }
+
 };
 
-console.log(PROGRAMMERS.getData());
-console.log(PROGRAMMERS.getProgrammer());
-
-console.log('Lodash testing dummy data: ', PROGRAMMERS + ' ' + _);
+PROGRAMMERS.init();
