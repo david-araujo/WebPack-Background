@@ -373,23 +373,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    frameworks: ['zend', 'express', 'react'] }, { user: 'louis', age: '26', languages: ['java', 'python', 'nodejs', 'php'],
 	    frameworks: ['symphony', 'express', 'spring'] }],
 	
-	  getData: function getData(programmer) {
+	  getData: function getData(user) {
 	
 	    console.log('Programmer\'s Report: ');
 	
-	    PROGRAMMERS.frontend.forEach(function (programmer, index) {
+	    var obj = _.filter(PROGRAMMERS.frontend, {});
 	
-	      console.log(index + ' - ' + ' Programmer: ' + programmer.user + ' - ' + ' Age: ' + programmer.age + ' - ' + ' Languages: ' + ' [ ' + programmer.languages + ' ] ');
+	    var result = obj;
 	
-	      var arr = [];
-	
-	      var data = arr.push({ programmer: programmer });
-	
-	      return data;
-	    });
+	    user = { result: result };
 	
 	    return {
-	      obj: _.filter(PROGRAMMERS, {})
+	      obj: user,
+	      print: function print(user) {
+	        return console.log(obj.toString());
+	      }
 	    };
 	  },
 	
