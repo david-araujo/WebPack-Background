@@ -33,7 +33,7 @@ const PROGRAMMERS = {
 
   getData: (user) => {
 
-    console.log('Programmer\'s Report: ');
+    console.log('Programmer\'s Main Object: ');
 
     let obj = _.filter(PROGRAMMERS.frontend, {});
 
@@ -51,6 +51,8 @@ const PROGRAMMERS = {
   },
 
   getProgrammer: (user) => {
+
+    console.log('Programmer\'s Array Filter: ');
 
     let obj = _.filter(PROGRAMMERS.frontend, {user: 'james'});
 
