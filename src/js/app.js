@@ -375,7 +375,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  getData: function getData(user) {
 	
-	    console.log('Programmer\'s Report: ');
+	    console.log('Programmer\'s Main Object: ');
 	
 	    var obj = _.filter(PROGRAMMERS.frontend, {});
 	
@@ -392,6 +392,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  getProgrammer: function getProgrammer(user) {
+	
+	    console.log('Programmer\'s Array Filter : ');
 	
 	    var obj = _.filter(PROGRAMMERS.frontend, { user: 'james' });
 	
