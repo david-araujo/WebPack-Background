@@ -23,7 +23,7 @@ Experimental environment testing with **web pack**.
 
 ### How to run this project:
 
-Make sure you have **Nodejs** installed in your machine, all packages are managed by using npm to get them installed.
+Make sure you have **Nodejs** installed, all packages are managed via **npm**.
 
 You just have to run on terminal:
 
@@ -44,5 +44,10 @@ You just have to run on terminal:
 
 2. webpack
 
+You can have three different building settings:
 
+1 . Production Build
+   
+  * webpack --mode=building
+  
 *Installing and further options are going to be released soon.*
