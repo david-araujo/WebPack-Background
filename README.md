@@ -46,8 +46,12 @@ You just have to run on terminal:
 
 You can have three different building settings:
 
-1 . Production Build
+1. Production Build
    
   * webpack --mode=building
+
+2. Dev Build Collored and Live Status
+
+  * webpack --progress --colors --watch --mode=dev
   
 *Installing and further options are going to be released soon.*
