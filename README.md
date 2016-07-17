@@ -20,4 +20,10 @@ Experimental environment testing with **web pack**.
    * Tasks
    * Running the server
 
+
+### How to run this project:
+
+Make sure you have **Nodejs** installed in your machine, all packages are managed by using the **feature* npm to get the packages installed.
+
+
 *Installing and further options are going to be released soon.*
