@@ -373,9 +373,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    frameworks: ['zend', 'express', 'react'] }, { user: 'louis', age: '26', languages: ['java', 'python', 'nodejs', 'php'],
 	    frameworks: ['symphony', 'express', 'spring'] }],
 	
-	  getData: function getData(user) {
+	  filterData: function filterData(user) {
 	
-	    console.log('Programmer\'s Main Object: ');
+	    console.log('Programmer\'s Filter Data: ');
 	
 	    var obj = _.filter(PROGRAMMERS.frontend, {});
 	
@@ -391,9 +391,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	
-	  getProgrammer: function getProgrammer(user) {
+	  filterUser: function filterUser(user) {
 	
-	    console.log('Programmer\'s Array Filter : ');
+	    console.log('Programmer\'s Array Filter User: ');
 	
 	    var obj = _.filter(PROGRAMMERS.frontend, { user: 'james' });
 	
@@ -404,8 +404,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return { obj: user };
 	  },
 	
+	  filterEach: function filterEach(person) {},
+	
 	  init: function init(start) {
-	    start = [console.log(PROGRAMMERS.getData()), console.log(PROGRAMMERS.getProgrammer())];
+	    start = [console.log(PROGRAMMERS.filterData()), console.log(PROGRAMMERS.filterUser())];
 	  }
 	
 	};
