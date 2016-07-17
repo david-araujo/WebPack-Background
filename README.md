@@ -29,7 +29,7 @@ You just have to run on terminal:
 
 1. npm install
 
-After having all the dev dependencies installed:
+  After having all the dev dependencies installed:
 
   * eslint
   * eslint loader
