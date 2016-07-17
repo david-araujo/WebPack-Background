@@ -31,9 +31,9 @@ const PROGRAMMERS = {
     frameworks: [ 'symphony', 'express', 'spring' ] }
   ],
 
-  getData: (user) => {
+  filterData: (user) => {
 
-    console.log('Programmer\'s Main Object: ');
+    console.log('Programmer\'s Filter Data: ');
 
     let obj = _.filter(PROGRAMMERS.frontend, {});
 
@@ -50,9 +50,9 @@ const PROGRAMMERS = {
 
   },
 
-  getProgrammer: (user) => {
+  filterUser: (user) => {
 
-    console.log('Programmer\'s Array Filter: ');
+    console.log('Programmer\'s Array Filter User: ');
 
     let obj = _.filter(PROGRAMMERS.frontend, {user: 'james'});
 
@@ -64,10 +64,14 @@ const PROGRAMMERS = {
 
   },
 
+  filterEach: (person) => {
+
+  },
+
   init: (start) => {
     start = [
-      console.log(PROGRAMMERS.getData()),
-      console.log(PROGRAMMERS.getProgrammer())
+      console.log(PROGRAMMERS.filterData()),
+      console.log(PROGRAMMERS.filterUser())
     ];
   }
 
