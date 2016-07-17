@@ -408,7 +408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    console.log('Programmer\s Array forEach');
 	
-	    var obj = _.PROGRAMMERS.backend.forEach(function (element, index) {
+	    var obj = PROGRAMMERS.backend.forEach(function (element, index) {
 	
 	      var result = {
 	        user: element.user,
