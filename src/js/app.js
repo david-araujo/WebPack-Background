@@ -404,10 +404,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return { obj: user };
 	  },
 	
-	  filterEach: function filterEach(person) {},
+	  filterEach: function filterEach(person) {
+	
+	    console.log('Programmer\s Array forEach');
+	
+	    var obj = PROGRAMMERS.backend.forEach(function (element, index) {
+	
+	      var result = {
+	        user: element.user,
+	        age: element.age
+	      };
+	
+	      person = { result: result };
+	
+	      return { obj: console.log(person) };
+	    });
+	
+	    try {
+	
+	      obj;
+	    } catch (err) {
+	
+	      console.log("The object is null, ES6 Validation doesn\'t allow it to not be started. error: " + err);
+	    } finally {
+	
+	      for (var i in PROGRAMMERS.backend) {
+	
+	        var objContainer = {
+	          user: PROGRAMMERS.backend[i].user,
+	          age: PROGRAMMERS.backend[i].age
+	        };
+	
+	        console.log({ objContainer: objContainer });
+	      }
+	    }
+	
+	    return { person: person };
+	  },
 	
 	  init: function init(start) {
-	    start = [console.log(PROGRAMMERS.filterData()), console.log(PROGRAMMERS.filterUser())];
+	    start = [console.log(PROGRAMMERS.filterData()), console.log(PROGRAMMERS.filterUser()), console.log(PROGRAMMERS.filterEach())];
 	  }
 	
 	};
