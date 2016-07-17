@@ -53,5 +53,7 @@ You can have three different building settings:
 2. Dev Build Collored and Live Status
 
   * webpack --progress --colors --watch --mode=dev
+
+3. Mocha Tests will be implemented soon*
   
 *Installing and further options are going to be released soon.*
