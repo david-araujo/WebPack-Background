@@ -68,7 +68,7 @@ const PROGRAMMERS = {
 
     console.log('Programmer\s Array forEach');
 
-    let obj = _.PROGRAMMERS.backend.forEach((element, index) => {
+    let obj = PROGRAMMERS.backend.forEach((element, index) => {
 
       let result = {
         user: element.user,
